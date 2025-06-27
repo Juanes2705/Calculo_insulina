@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">Calculo_insulina</string>
+    <string name="app_name">Calculadora de Insulina</string>
+    <string name="titulo_calculadora">Calculadora de Insulina</string>
+    <string name="informacion_basica">Información Básica</string>
+    <string name="tipo_comida">Tipo de Comida:</string>
+    <string name="glicemia">Glicemia (mg/dL):</string>
+    <string name="hint_glicemia">Ingrese su glicemia</string>
+    <string name="seleccion_alimentos">Selección de Alimentos</string>
+    <string name="categoria">Categoría:</string>
+    <string name="alimento">Alimento:</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="agregar_alimento">Agregar Alimento</string>
+    <string name="alimentos_seleccionados">Alimentos Seleccionados</string>
+    <string name="carbohidratos_totales">Carbohidratos totales: %1$.1f g</string>
+    <string name="calcular_insulina">Calcular Insulina</string>
+    <string name="resultados_calculo">Resultados del Cálculo</string>
+    <string name="ratio">Ratio: %1$d</string>
+    <string name="factor_correccion">Factor de Corrección: %1$d</string>
+    <string name="insulina_alimentos">Insulina para Alimentos: %1$.2f</string>
+    <string name="insulina_total">Insulina Total: %1$.2f</string>
+    <string name="guardar_registro">Guardar Registro</string>
+    <string name="ver_historial">Ver Historial</string>
+    <string name="historial_registros">Historial de Registros</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="error_glicemia_vacia">Por favor ingrese su glicemia</string>
+    <string name="error_glicemia_invalida">La glicemia debe ser mayor a 0</string>
+    <string name="error_sin_alimentos">Por favor seleccione al menos un alimento</string>
+    <string name="error_sin_alimentos_disponibles">No hay alimentos disponibles</string>
+    <string name="alimento_agregado">Alimento agregado</string>
+    <string name="registro_guardado">Registro guardado exitosamente</string>
+    <string name="error_guardar">Error al guardar el registro</string>
+    <string name="sin_registros">No hay registros para mostrar</string>
+    <string name="fecha">Fecha: %1$s</string>
+    <string name="tipo">Tipo: %1$s</string>
+    <string name="glicemia_valor">Glicemia: %1$d mg/dL</string>
+    <string name="carbohidratos_valor">Carbohidratos: %1$.1f g</string>
+    <string name="insulina_total_valor">Insulina Total: %1$.2f</string>
+    
+    <!-- Facebook Login Configuration -->
+    <string name="facebook_app_id">123456789012345</string>
+    <string name="facebook_client_token">abcdef123456789</string>
 </resources>

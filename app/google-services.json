@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "734605558005",
+    "project_id": "prueba-13075",
+    "storage_bucket": "prueba-13075.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734605558005:android:50880bfc72666467f305bc",
+        "android_client_info": {
+          "package_name": "co.edu.univalle.calculo_insulina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734605558005-67fjvkrasol7u9h11rej9n7jhhqf2in5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.univalle.calculo_insulina",
+            "certificate_hash": "72962e956cd14d5ef7507c74cf9e3c482ce91412"
+          }
+        },
+        {
+          "client_id": "734605558005-bqku1mv3436cuu77flc91f558shnakh3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2NjRzyreSOAYQLJIGlaDlnuHcntLw_1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734605558005-bqku1mv3436cuu77flc91f558shnakh3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
