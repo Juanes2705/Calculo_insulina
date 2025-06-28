@@ -383,7 +383,7 @@
             android:src="@android:drawable/ic_menu_recent_history"
             android:contentDescription="Ver Historial"
             android:backgroundTint="#FF9800"
-            android:tint="#FFFFFF" />
+            app:tint="#FFFFFF" />
 
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,13 @@
+Listado de Requerimientos a Desarrollar
+
+ Registro y autenticación de usuarios
+
+ Pantalla para ingresar glicemia, tipo de comida y alimentos
+
+ Búsqueda de alimentos desde API
+
+ Cálculo de insulina total
+
+ Guardado de registros con fecha/hora, glicemia, comida y alimentos
+
+ Visualización de historial de comidas y dosis aplicadas

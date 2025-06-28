@@ -280,8 +280,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 Categoria categoria = new Categoria();
-                categoria.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_CATEGORIA_ID)));
-                categoria.setNombre(cursor.getString(cursor.getColumnIndex(COLUMN_CATEGORIA_NOMBRE)));
+                categoria.setId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_CATEGORIA_ID)));
+                categoria.setNombre(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CATEGORIA_NOMBRE)));
                 categorias.add(categoria);
             } while (cursor.moveToNext());
         }
@@ -299,12 +299,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 Alimento alimento = new Alimento();
-                alimento.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_ALIMENTO_ID)));
-                alimento.setNombre(cursor.getString(cursor.getColumnIndex(COLUMN_ALIMENTO_NOMBRE)));
-                alimento.setCategoriaId(cursor.getInt(cursor.getColumnIndex(COLUMN_ALIMENTO_CATEGORIA_ID)));
-                alimento.setPorcion(cursor.getString(cursor.getColumnIndex(COLUMN_ALIMENTO_PORCION)));
-                alimento.setPesoGramos(cursor.getDouble(cursor.getColumnIndex(COLUMN_ALIMENTO_PESO_GRAMOS)));
-                alimento.setCarbohidratos(cursor.getDouble(cursor.getColumnIndex(COLUMN_ALIMENTO_CARBOHIDRATOS)));
+                alimento.setId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ALIMENTO_ID)));
+                alimento.setNombre(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_ALIMENTO_NOMBRE)));
+                alimento.setCategoriaId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ALIMENTO_CATEGORIA_ID)));
+                alimento.setPorcion(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_ALIMENTO_PORCION)));
+                alimento.setPesoGramos(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_ALIMENTO_PESO_GRAMOS)));
+                alimento.setCarbohidratos(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_ALIMENTO_CARBOHIDRATOS)));
                 alimentos.add(alimento);
             } while (cursor.moveToNext());
         }
@@ -320,7 +320,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int ratio = 0;
         if (cursor.moveToFirst()) {
-            ratio = cursor.getInt(cursor.getColumnIndex(COLUMN_RATIO_VALOR));
+            ratio = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_RATIO_VALOR));
         }
         cursor.close();
         return ratio;
@@ -334,7 +334,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int fc = 0;
         if (cursor.moveToFirst()) {
-            fc = cursor.getInt(cursor.getColumnIndex(COLUMN_FC_VALOR));
+            fc = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_FC_VALOR));
         }
         cursor.close();
         return fc;
@@ -362,15 +362,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 RegistroInsulina registro = new RegistroInsulina();
-                registro.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_REGISTRO_ID)));
-                registro.setFecha(cursor.getString(cursor.getColumnIndex(COLUMN_REGISTRO_FECHA)));
-                registro.setTipoComida(cursor.getString(cursor.getColumnIndex(COLUMN_REGISTRO_TIPO_COMIDA)));
-                registro.setGlicemia(cursor.getInt(cursor.getColumnIndex(COLUMN_REGISTRO_GLICEMIA)));
-                registro.setCarbohidratos(cursor.getDouble(cursor.getColumnIndex(COLUMN_REGISTRO_CARBOHIDRATOS)));
-                registro.setRatio(cursor.getInt(cursor.getColumnIndex(COLUMN_REGISTRO_RATIO)));
-                registro.setFactorCorreccion(cursor.getInt(cursor.getColumnIndex(COLUMN_REGISTRO_FC)));
-                registro.setInsulinaAlimentos(cursor.getDouble(cursor.getColumnIndex(COLUMN_REGISTRO_IA)));
-                registro.setInsulinaTotal(cursor.getDouble(cursor.getColumnIndex(COLUMN_REGISTRO_INSULINA_TOTAL)));
+                registro.setId(cursor.getLong(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_ID)));
+                registro.setFecha(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_FECHA)));
+                registro.setTipoComida(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_TIPO_COMIDA)));
+                registro.setGlicemia(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_GLICEMIA)));
+                registro.setCarbohidratos(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_CARBOHIDRATOS)));
+                registro.setRatio(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_RATIO)));
+                registro.setFactorCorreccion(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_FC)));
+                registro.setInsulinaAlimentos(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_IA)));
+                registro.setInsulinaTotal(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_INSULINA_TOTAL)));
                 registros.add(registro);
             } while (cursor.moveToNext());
         }
@@ -387,15 +387,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         RegistroInsulina registro = null;
         if (cursor.moveToFirst()) {
             registro = new RegistroInsulina();
-            registro.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_REGISTRO_ID)));
-            registro.setFecha(cursor.getString(cursor.getColumnIndex(COLUMN_REGISTRO_FECHA)));
-            registro.setTipoComida(cursor.getString(cursor.getColumnIndex(COLUMN_REGISTRO_TIPO_COMIDA)));
-            registro.setGlicemia(cursor.getInt(cursor.getColumnIndex(COLUMN_REGISTRO_GLICEMIA)));
-            registro.setCarbohidratos(cursor.getDouble(cursor.getColumnIndex(COLUMN_REGISTRO_CARBOHIDRATOS)));
-            registro.setRatio(cursor.getInt(cursor.getColumnIndex(COLUMN_REGISTRO_RATIO)));
-            registro.setFactorCorreccion(cursor.getInt(cursor.getColumnIndex(COLUMN_REGISTRO_FC)));
-            registro.setInsulinaAlimentos(cursor.getDouble(cursor.getColumnIndex(COLUMN_REGISTRO_IA)));
-            registro.setInsulinaTotal(cursor.getDouble(cursor.getColumnIndex(COLUMN_REGISTRO_INSULINA_TOTAL)));
+            registro.setId(cursor.getLong(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_ID)));
+            registro.setFecha(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_FECHA)));
+            registro.setTipoComida(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_TIPO_COMIDA)));
+            registro.setGlicemia(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_GLICEMIA)));
+            registro.setCarbohidratos(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_CARBOHIDRATOS)));
+            registro.setRatio(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_RATIO)));
+            registro.setFactorCorreccion(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_FC)));
+            registro.setInsulinaAlimentos(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_IA)));
+            registro.setInsulinaTotal(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_REGISTRO_INSULINA_TOTAL)));
         }
         cursor.close();
         return registro;
@@ -427,13 +427,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Usuario usuario = null;
         if (cursor.moveToFirst()) {
             usuario = new Usuario();
-            usuario.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_USUARIO_ID)));
-            usuario.setNombre(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_NOMBRE)));
-            usuario.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_EMAIL)));
-            usuario.setFotoUrl(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_FOTO_URL)));
-            usuario.setTipoLogin(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_TIPO_LOGIN)));
-            usuario.setIdExterno(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_ID_EXTERNO)));
-            usuario.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_PASSWORD)));
+            usuario.setId(cursor.getLong(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_ID)));
+            usuario.setNombre(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_NOMBRE)));
+            usuario.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_EMAIL)));
+            usuario.setFotoUrl(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_FOTO_URL)));
+            usuario.setTipoLogin(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_TIPO_LOGIN)));
+            usuario.setIdExterno(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_ID_EXTERNO)));
+            usuario.setPassword(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_PASSWORD)));
         }
         cursor.close();
         return usuario;
@@ -448,13 +448,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Usuario usuario = null;
         if (cursor.moveToFirst()) {
             usuario = new Usuario();
-            usuario.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_USUARIO_ID)));
-            usuario.setNombre(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_NOMBRE)));
-            usuario.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_EMAIL)));
-            usuario.setFotoUrl(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_FOTO_URL)));
-            usuario.setTipoLogin(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_TIPO_LOGIN)));
-            usuario.setIdExterno(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_ID_EXTERNO)));
-            usuario.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_PASSWORD)));
+            usuario.setId(cursor.getLong(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_ID)));
+            usuario.setNombre(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_NOMBRE)));
+            usuario.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_EMAIL)));
+            usuario.setFotoUrl(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_FOTO_URL)));
+            usuario.setTipoLogin(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_TIPO_LOGIN)));
+            usuario.setIdExterno(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_ID_EXTERNO)));
+            usuario.setPassword(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_USUARIO_PASSWORD)));
         }
         cursor.close();
         return usuario;

@@ -1,0 +1,60 @@
+DATOS DE ACCESO PARA PRUEBAS - CALCULADORA DE INSULINA
+========================================================
+
+1. CONFIGURACIÓN DE GOOGLE SIGN-IN
+----------------------------------
+Para que funcione el login con Google, es necesario:
+
+a) Crear un proyecto en Google Cloud Console
+b) Habilitar Google Sign-In API
+c) Configurar el archivo google-services.json con las credenciales
+d) Agregar el SHA-1 del proyecto en la consola de Google
+
+Archivo de configuración: app/google-services.json
+(Nota: Este archivo debe ser generado desde Google Cloud Console)
+
+2. DATOS DE PRUEBA PARA LOGIN POR EMAIL
+---------------------------------------
+Si no se configura Google Sign-In, se puede usar el login por email:
+
+Email de prueba: test@demo.com
+Contraseña: 123456
+
+3. DATOS PREDEFINIDOS EN LA BASE DE DATOS
+-----------------------------------------
+
+CATEGORÍAS DE ALIMENTOS:
+- Cereales
+- Tubérculos y Plátanos
+- Leguminosas
+- Lácteos
+- Verduras
+- Frutas
+- Procesados
+
+RATIOS DE INSULINA:
+- Desayuno: 15g carbohidratos por unidad de insulina
+- Almuerzo: 12g carbohidratos por unidad de insulina
+- Cena: 15g carbohidratos por unidad de insulina
+
+FACTORES DE CORRECCIÓN:
+- Glicemia 70-100 mg/dL: -1 unidad
+- Glicemia 140-200 mg/dL: +2 unidades
+- Glicemia 200-250 mg/dL: +3 unidades
+- Glicemia >250 mg/dL: +4 unidades
+
+4. EJEMPLOS DE CÁLCULOS PARA PRUEBAS
+------------------------------------
+
+Ejemplo 1:
+- Tipo de comida: Desayuno
+- Glicemia: 180 mg/dL
+- Alimentos: 1 taza de arroz (45g carbohidratos)
+- Cálculo: 45g / 15 = 3 unidades + 2 unidades (FC) = 5 unidades total
+
+Ejemplo 2:
+- Tipo de comida: Almuerzo
+- Glicemia: 95 mg/dL
+- Alimentos: 1 plátano (30g carbohidratos)
+- Cálculo: 30g / 12 = 2.5 unidades - 1 unidad (FC) = 1.5 unidades total
+

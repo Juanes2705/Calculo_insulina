@@ -23,7 +23,7 @@
             android:layout_height="48dp"
             android:src="@android:drawable/ic_menu_revert"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:tint="#FFFFFF"
+            app:tint="#FFFFFF"
             android:contentDescription="Volver" />
 
         <TextView
