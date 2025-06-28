@@ -96,7 +96,7 @@ Calculo_insulina/
 ### Datos de Prueba
 
 Si no se configura Google Sign-In, se puede usar el login por email:
-- **Email**: usuario@test.com
+- **Email**: test@demo.com
 - **Contraseña**: 123456
 
 ## Funcionalidades
