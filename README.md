@@ -173,22 +173,9 @@ La carpeta `Documentación/` contiene:
 - Desinstalar y reinstalar la aplicación
 - Verificar archivo `Calculo_insulina.db` en `assets/`
 
-## Contribución
 
-Este es un proyecto académico desarrollado para la Universidad del Valle. Para contribuciones o reportes de errores, contactar al equipo de desarrollo.
 
-## Licencia
-
-Este proyecto es propiedad de la Universidad del Valle y está destinado únicamente para fines educativos.
-
-## Contacto
-
-- **Universidad**: Universidad del Valle
-- **Facultad**: Ingeniería
-- **Programa**: Ingeniería de Sistemas
-- **Asignatura**: Desarrollo de Aplicaciones Móviles
 
 ---
 
-**Nota**: Esta aplicación es una herramienta de apoyo y no reemplaza la consulta médica profesional. Los cálculos están basados en estándares médicos generales y pueden requerir ajustes individuales por parte del médico tratante. 
 
